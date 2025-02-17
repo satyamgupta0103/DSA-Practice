@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-//Using Map - O(n)
+//1st Approach Using Map - O(n)
 var containsDuplicate = function (nums) {
   const map = new Map();
 
@@ -15,4 +15,10 @@ var containsDuplicate = function (nums) {
   }
 
   return false;
+};
+
+//2nd Approach Using Set - O(n)
+var containsDuplicate = function (nums) {
+  const set = new Set(nums);
+  return set.size !== nums.length;
 };
